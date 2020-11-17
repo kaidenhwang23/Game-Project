@@ -20,6 +20,10 @@ b1.moveBall()
 b2.drawBall()
 b2.moveBall()
 
+if(frameCount % 100 == 0){
+  b2.changeColor()
+}
+
 
 
 }
@@ -41,8 +45,8 @@ class Ball {
   }
 
   moveBall(){
-    this.x = mouse.x() += random(-100,100)
-    this.y = mouse.y() += random(-10,10)
+    this.x = mouseX + random(-100,100)
+    this.y = mouseY + random(-10,10)
   }
 
   // here is where you'll put the instructions for making balls
