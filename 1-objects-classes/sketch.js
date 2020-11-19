@@ -12,20 +12,14 @@ function setup() {
 
 
 function draw(){
-	background(220);
+	background(220){
  //draw the ball called b (go look in the Ball class for the drawBall function)
  //move the ball called b (go look in the Ball class for the moveBall function)
 b1.drawBall()
 b1.moveBall()
 b2.drawBall()
 b2.moveBall()
-
-if(frameCount % 100 == 0){
-  b2.changeColor()
 }
-
-
-
 }
 
 
