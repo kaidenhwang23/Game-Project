@@ -3,6 +3,7 @@
 
 let balls = [];
 let direction = ["right", "left", "up" ,"down"]
+let place = ["right", "left", "up" ,"down"]
 
 function setup() {
   createCanvas(800, 400);
@@ -17,6 +18,9 @@ function draw(){
 	    balls[i].drawBall();
       balls[i].moveBall();
 	  }
+
+  fill("white")
+  ellipse(400,200,100)
 }
 
 function keyPressed(){
@@ -66,26 +70,27 @@ class Ball {
 
 	moveBall(){ //update the location of the ball, so it moves across the screen
     if(this.direction == "right"){
-      this.x = this.x+10
+      this.x = this.x+20
       this.y = this.y + 0
     }
     if(this.direction == "left"){
-      this.x = this.x -10
+      this.x = this.x -20
       this.y = this.y + 0
     }
     if(this.direction == "up"){
-      this.y = this.y - 10
+      this.y = this.y - 20
       this.x = this.x + 0
     }
     if(this.direction == "down"){
-      this.y = this.y + 10
+      this.y = this.y + 20
       this.x = this.x + 0
     }
     this.color = color(0, random(0,255), random(0,255))
-    this.size = random(10,200)
+    this.size = random(10,30)
 
 
 	}
+
 
 
 }
