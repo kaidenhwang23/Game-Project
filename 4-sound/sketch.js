@@ -7,8 +7,12 @@ let me;
 let mySound;
 
 function preload() {
-  soundFormats('mp3', 'ogg');
+  soundFormats('mp3', 'ogg', 'wav');
   mySound = loadSound('boing1.mp3');
+  mySound2 = loadSound('birdnoise.wav')
+  mySound3 = loadSound('leafnoise.wav')
+  mySound4 = loadSound('windchimes.wav')
+  mySound5 = loadSound('windy')
 }
 
 function setup() {
