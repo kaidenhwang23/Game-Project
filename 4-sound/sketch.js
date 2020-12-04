@@ -29,7 +29,7 @@ function setup() {
 function draw(){
 	background(220);
   for(i = 0; i< birds.length; i++){
-    bird.drawBird
+    bird.drawBird()
   }
 
 }
@@ -49,14 +49,19 @@ class Birb {
   constructor(x, y){
     this.x = x
     this.y = y
-
+  }
   drawBird(){
     fill("yellow")
     stroke("black")
-    rect(this.x,this.y,20,20,5)
+    rect(this.x,this.y,100,100,5)
+
+    fill("orange")
+    triangle(this.x+100, this.y+25, this.x+130, this.y+40, this.x+100, this.y+55)
+
+    fill("black")
+    ellipse(this.x+70, this.y+20, 20)
     }
 
 
 
   }
-}
